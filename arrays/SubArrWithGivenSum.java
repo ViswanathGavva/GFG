@@ -29,7 +29,7 @@ Testcase2: sum of elements from 1st position to 5th position is 15
 */
 public class SubArrWithGivenSum {
 
-public voild findSubArrWithGivenSum(int[] ip,int sum){
+public void findSubArrWithGivenSum(int[] ip,int sum){
 	/** Pseudo code:
 	
 		int[] subArr = null;
