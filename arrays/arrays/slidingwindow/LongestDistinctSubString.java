@@ -29,26 +29,37 @@ public class LongestDistinctSubString {
 	
 	public static void main(String[] args) {
 		//String str = "pwwkew";
+		String str = "wpwklew";
 		//String str ="abcabcbb";
-		String str ="bbbbb";
+		//String str ="bbbbb";
 		System.out.println(findMaxDistinctSubStr(str));
 	}
 
 	private static String findMaxDistinctSubStr(String str) {
+		//make the first char as current window to start with
 		String windowStr = str.substring(0,1);
 		String maxStr = windowStr;
 		
 		for(int right=1;right<str.length();right++) {
 			char rightChar = str.charAt(right);
-			if( windowStr.indexOf(rightChar)==-1) {
-				windowStr = windowStr+rightChar;
-				maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
-				continue;
+			//if the next character is already present in the current window, 
+			// Then split it till the index of the character in the window
+			if( windowStr.indexOf(rightChar)>=0) {
+				windowStr = windowStr.substring(windowStr.indexOf(rightChar)+1);
 			}
-			
-			windowStr = windowStr.substring(windowStr.indexOf(rightChar)+1);
+			//append the next char to the window.
 			windowStr = windowStr+rightChar;
 			maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
+			
+//			if( windowStr.indexOf(rightChar)==-1) {
+//				windowStr = windowStr+rightChar;
+//				maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
+//				continue;
+//			}
+//			
+//			windowStr = windowStr.substring(windowStr.indexOf(rightChar)+1);
+//			windowStr = windowStr+rightChar;
+//			maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
 			
 		}
 		return maxStr;
