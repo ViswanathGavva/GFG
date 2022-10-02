@@ -50,17 +50,7 @@ public class LongestDistinctSubString {
 			}
 			//append the next char to the window.
 			windowStr = windowStr+rightChar;
-			maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
-			
-//			if( windowStr.indexOf(rightChar)==-1) {
-//				windowStr = windowStr+rightChar;
-//				maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
-//				continue;
-//			}
-//			
-//			windowStr = windowStr.substring(windowStr.indexOf(rightChar)+1);
-//			windowStr = windowStr+rightChar;
-//			maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;
+			maxStr =   windowStr.length()>maxStr.length()? windowStr:maxStr;			
 			
 		}
 		return maxStr;
