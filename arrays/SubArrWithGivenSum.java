@@ -48,7 +48,7 @@ public void findSubArrWithGivenSum(int[] ip,int sum){
 			subArr.push(ip[i]);
 		}
 	**/
-	int[] subArr = new int[]();
+	int[] subArr = {};
 	
 }
 
