@@ -29,7 +29,8 @@ public class LongestDistinctSubString {
 	
 	public static void main(String[] args) {
 		//String str = "pwwkew";
-		String str = "wpwklew";
+		//String str = "wpwklew";
+		String str = "wpwkabcabcglew";
 		//String str ="abcabcbb";
 		//String str ="bbbbb";
 		System.out.println(findMaxDistinctSubStr(str));
